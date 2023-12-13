@@ -1,13 +1,10 @@
-import dynamic from "next/dynamic";
+
 import Image from "next/image";
-import bg from "@/public/logo2.jpg";
+import bg from "@/public/logo.jpg";
 import Search from "./Search";
 
 export default function Hero() {
-  const DynamicHeader = dynamic(() => import("../components/Navbar"), {
-    ssr: false,
-  });
-
+ 
   return (
     <>
       <div
@@ -42,7 +39,6 @@ export default function Hero() {
             zIndex: "1000",
           }}
         >
-          <DynamicHeader />
         </div>
 
         <div
@@ -56,6 +52,7 @@ export default function Hero() {
             zIndex: "1",
           }}
         >
+           
           <h1 className="z-[1000] text-[65px] leading-[65px] text-center font-bold text-black ">
             Discover great Labs <br />
             in Nigeria

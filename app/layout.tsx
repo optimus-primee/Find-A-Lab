@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Open_Sans, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -35,12 +36,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+   const DynamicHeader = dynamic(() => import("./components/Navbar"), {
+     ssr: false,
+   });
+
   return (
     <html
       lang="en"
       className={`${playfair.variable} ${nunito.variable} ${poppins.variable} ${opensans.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <DynamicHeader />
+
+        {children}
+      </body>
     </html>
   );
 }
