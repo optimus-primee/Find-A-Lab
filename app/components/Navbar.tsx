@@ -32,8 +32,7 @@ export default function Navbar() {
               </Link>
               <nav className="sm:flex hidden">
                 <ul className="flex gap-5 font-nunito text-black">
-                  <li>Home</li>
-                  <li>Search By Industry</li>
+                  
                   <li>Search By Location</li>
                   <li>Blog</li>
                   <li>Contact</li>

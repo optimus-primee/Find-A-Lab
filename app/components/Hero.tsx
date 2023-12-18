@@ -2,6 +2,7 @@
 import Image from "next/image";
 import bg from "@/public/logo.jpg";
 import Search from "./Search";
+import Searchh from "./Searchh";
 
 export default function Hero() {
  
@@ -62,6 +63,7 @@ export default function Hero() {
             Nigeria
           </h5>
           <Search />
+          <Searchh/>
         </div>
       </div>
     </>

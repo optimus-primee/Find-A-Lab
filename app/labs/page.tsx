@@ -1,8 +1,18 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import bgg from "@/public/logo.jpg";
 import MyTabs from "../components/Tabs";
+import Profile from "../components/Profile";
+import axios from "axios";
 
 export default function page() {
+  const [data,setData] = useState<Task[]>([])
+  useEffect(()=>
+  {
+axios.get("http://localhost:3031/labs")
+.then(res=>setData(res.data))
+.catch(err => console.log(err));
+  },[])
   return (
     <>
       <div
@@ -30,10 +40,7 @@ export default function page() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div>
-                <h6>Price range</h6>
-                <h6>$$</h6>
-              </div>
+              
               <button className=" bg-[#74d4cc] px-7 py-3 text-white rounded-[5px]">
                 Direct Message
               </button>
@@ -41,8 +48,15 @@ export default function page() {
           </div>
         </div>
       </div>
+      {data.map((d,i)=>{
+        return (
+          <div key={i}>
+            <div>{d.name}</div>
+          </div>
+        );
+      })}
 
-      <MyTabs />
+      <Profile/>
     </>
   );
 }

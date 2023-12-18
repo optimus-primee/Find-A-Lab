@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { FaBarcode } from "react-icons/fa6";
 import {
@@ -91,7 +92,7 @@ export default function Profile() {
               <h5>Open</h5>
             </div>
             <div className="flex items-center gap-2 cursor-pointer">
-              <p>Open hours today: 2:00 PM - 12:45 PM</p>
+              <p>Open hours today: 9:00 AM - 04:00 PM</p>
               {toggle ? (
                 <IoCaretUpCircleOutline className="text-[20px]" />
               ) : (
@@ -107,31 +108,31 @@ export default function Profile() {
           >
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Monday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>9:00 AM - 4:00 PM</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Tuesday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>9:00 AM - 4:00 PM</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Wednesday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>9:00 AM - 4:00 PM</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Thursday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>9:00 AM - 4:00 PM</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Friday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>9:00 AM - 4:00 PM</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Staurday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>N/A</h5>
             </div>
             <div className="flex justify-between w-full border-b-[1px] border-[#cfcfcf] py-4 items-center">
               <h5>Sunday</h5>
-              <h5>2:00 PM - 12:45 PM</h5>
+              <h5>N/A</h5>
             </div>
             <div className="flex justify-end items-end w-full mt-1">
               <DayTimeDate />
