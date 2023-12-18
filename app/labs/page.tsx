@@ -20,8 +20,8 @@ export default function page() {
           justifyContent: "start",
         }}
       >
-        <div className="max-w-[1400px] mx-auto w-full">
-          <div className="flex justify-between items-center w-full p-5">
+        <div className="max-w-[1400px] mx-auto px-20 w-full">
+          <div className="flex justify-between items-center w-full  py-8">
             <div className=" flex gap-4 items-center">
               <div className="bg-black w-[80px] h-[80px] rounded-full"></div>
               <div className="flex flex-col">
