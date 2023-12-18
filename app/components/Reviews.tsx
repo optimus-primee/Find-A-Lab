@@ -5,8 +5,10 @@ import {
   IoCaretUpCircleOutline,
 } from "react-icons/io5";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { MdOutlineRateReview } from "react-icons/md";
 import Image from "next/image";
 import bg from "@/public/logo2.jpg";
+import { MdFileUpload } from "react-icons/md";
 
 export default function Reviews() {
   const [toggle, setToggle] = useState(false);
@@ -88,6 +90,59 @@ export default function Reviews() {
         </div>
         <div className="col-span-3 flex flex-col items-center gap-8 w-full">
           <div className="text-sm p-6 bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
+            <div className="flex  gap-2">
+              <MdOutlineRateReview className="text-[20px]" />
+              <h6 className="font-bold">Add a Review</h6>
+            </div>
+            <div className="grid grid-cols-2">
+              <div className="mt-7">
+                <h6>Overall Rating</h6>
+                <div className="flex items-center text-[16px] gap-1 mt-3">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
+              </div>
+              <div className="mt-7">
+                <h6>Overall Rating</h6>
+                <div className="flex items-center text-[16px] gap-1 mt-3">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
+              </div>
+              <div className="mt-7">
+                <h6>Overall Rating</h6>
+                <div className="flex items-center text-[16px] gap-1 mt-3">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
+              </div>
+              <div className="mt-7">
+                <h6>Overall Rating</h6>
+                <div className="flex items-center text-[16px] gap-1 mt-3">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
+              </div>
+              <div className="mt-7">
+                <h6>Upload Images</h6>
+                <div className="w-[100px] h-[100px] border-dashed border-[2px] flex justify-center items-center mt-3">
+                  <MdFileUpload className="text-[20px]" />
+                </div>
+              </div>
+            </div>
+            <div></div>
             <form>
               <input
                 type="text"
@@ -106,11 +161,14 @@ export default function Reviews() {
               />
               <div className="flex mt-5 items-center">
                 <div className="w-[20px] h-[20px] border-[2px] border-[#76d5cb]"></div>
-                <p></p>
+                <p>
+                  Save my name, email, and website in this browser for the next
+                  time I comment.
+                </p>
               </div>
 
               <button className="w-full bg-[#76d5cb] h-[50px] flex justify-center items-center rounded-[8px] text-white mt-5">
-                Submit Message
+                Submit Review
               </button>
             </form>
           </div>
