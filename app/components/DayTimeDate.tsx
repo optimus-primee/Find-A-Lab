@@ -13,10 +13,9 @@ const DayTimeDate = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const options = {
-   
+  const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
-    day: "numeric", // Swap the order of 'month' and 'day'
+    day: "numeric",
     month: "long",
   };
 
