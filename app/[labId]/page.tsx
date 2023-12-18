@@ -1,20 +1,39 @@
-"use client"
 import React, { useEffect, useState } from "react";
 import bgg from "@/public/logo.jpg";
 import MyTabs from "../components/Tabs";
 import Profile from "../components/Profile";
 import axios from "axios";
+import Link from "next/link";
+import type { Metadata } from "next";
 
-export default function page() {
-  const [data,setData] = useState<Task[]>([])
-  useEffect(()=>
-  {
-axios.get("http://localhost:3031/labs")
-.then(res=>setData(res.data))
-.catch(err => console.log(err));
-  },[])
+import getLab from "../libs/getLab";
+
+type Params = {
+  params: {
+    labId: string;
+  };
+};
+
+export async function generateMetadata({
+  params: { labId },
+}: Params): Promise<Metadata> {
+  const taskData: Promise<Task> = getLab(labId);
+  const task: Task = await taskData;
+
+  return {
+    title: task.name,
+    description: `This is the page of ${task.name}`,
+  };
+}
+
+export default async function UserPage({ params: { labId } }: Params) {
+  const taskData: Promise<Task> = getLab(labId);
+
+  const task = await taskData;
+
   return (
     <>
+      {" "}
       <div
         style={{
           // use the src property of the image object
@@ -35,28 +54,23 @@ axios.get("http://localhost:3031/labs")
             <div className=" flex gap-4 items-center">
               <div className="bg-black w-[80px] h-[80px] rounded-full"></div>
               <div className="flex flex-col">
-                <h3 className="text-[22px] text-bold">The Activity People</h3>
-                <h3>Edwardian picture house, screening mainstream films</h3>
+                <h3 className="text-[22px] text-bold">{task.name}</h3>
+                <h3>{task.name}</h3>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              
               <button className=" bg-[#74d4cc] px-7 py-3 text-white rounded-[5px]">
                 Direct Message
               </button>
             </div>
           </div>
         </div>
+        
       </div>
-      {data.map((d,i)=>{
-        return (
-          <div key={i}>
-            <div>{d.name}</div>
-          </div>
-        );
-      })}
-
-      <Profile/>
+      <Profile
+        taskName={task.description}
+        
+      />
     </>
   );
 }

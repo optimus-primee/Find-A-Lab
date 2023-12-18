@@ -131,7 +131,7 @@ function MyTabs() {
 
           <Tab.Panels>
             <Tab.Panel>
-              <Profile />
+             
             </Tab.Panel>
             <Tab.Panel>
               <Reviews />

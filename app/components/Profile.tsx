@@ -8,7 +8,7 @@ import {
 import DayTimeDate from "./DayTimeDate";
 import Intrested from "./Intrested";
 
-export default function Profile() {
+export default function Profile({ taskName}) {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="max-w-[1440px] mx-auto mt-10 px-20">
@@ -19,16 +19,7 @@ export default function Profile() {
               <FaBarcode className="rotate-90" />
               <h5>Description</h5>
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              molestiae fuga libero dignissimos facere. Ex similique qui
-              mollitia sapiente harum. Voluptas mollitia eius quia inventore
-              saepe, commodi harum quae sapiente? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Eveniet molestiae fuga libero
-              dignissimos facere. Ex similique qui mollitia sapiente harum.
-              Voluptas mollitia eius quia inventore saepe, commodi harum quae
-              sapiente?
-            </p>
+            <p>{taskName}</p>
           </div>
           <div className="text-sm p-6  bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
@@ -138,21 +129,12 @@ export default function Profile() {
               <DayTimeDate />
             </div>
           </div>
-          <div className="text-sm p-6 bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
-            <div className="flex gap-2 items-center mb-4">
+          <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
+            <div className="flex gap-2 items-center  mb-4">
               <FaBarcode className="rotate-90" />
               <h5>Categories</h5>
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              molestiae fuga libero dignissimos facere. Ex similique qui
-              mollitia sapiente harum. Voluptas mollitia eius quia inventore
-              saepe, commodi harum quae sapiente? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Eveniet molestiae fuga libero
-              dignissimos facere. Ex similique qui mollitia sapiente harum.
-              Voluptas mollitia eius quia inventore saepe, commodi harum quae
-              sapiente?
-            </p>
+           p
           </div>
           <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
