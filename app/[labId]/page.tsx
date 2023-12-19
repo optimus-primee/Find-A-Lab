@@ -30,6 +30,7 @@ export default async function UserPage({ params: { labId } }: Params) {
   const taskData: Promise<Task> = getLab(labId);
 
   const task = await taskData;
+ const serviceNames = task.services && task.services.length > 0 ? [task.services[0].name] : [];
 
   return (
     <>
@@ -69,7 +70,8 @@ export default async function UserPage({ params: { labId } }: Params) {
       <Profile
         taskName={task.description}
         serviceNames={task.services.map((s) => s.name)}
-        
+        maps={task.map}
+        addresss={task.address}
       />
     </>
   );

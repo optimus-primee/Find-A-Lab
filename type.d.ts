@@ -7,4 +7,6 @@ type Task = {
    { id:string,
     name:string}
   ]
+  map:string;
+  address:string
 };

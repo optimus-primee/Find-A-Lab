@@ -10,11 +10,13 @@ import Intrested from "./Intrested";
 interface ProfileProps {
   taskName: string;
   serviceNames: string[];
+  maps:string;
+  addresss:string
 
   // Assuming taskName is a string, adjust the type accordingly
 }
 
-const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames }) => {
+const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -35,7 +37,7 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames }) => {
             </div>
             <div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.9097061673388!2d3.382435975053416!3d6.533087223051733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d05da510ba7%3A0x653eb43765e5112f!2s11%20Mogbonjubola%20St%2C%20Bariga%2C%20Lagos%20102216%2C%20Lagos!5e0!3m2!1sen!2sng!4v1702548855705!5m2!1sen!2sng"
+                src={maps}
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -45,21 +47,17 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames }) => {
               ></iframe>
             </div>
           </div>
-          <div className="text-sm p-6 bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
-            <div className="flex gap-2 items-center mb-4">
+          <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
+            <div className="flex gap-2 items-center  mb-4">
               <FaBarcode className="rotate-90" />
-              <h5>Description</h5>
+              <h5>Categories</h5>
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              molestiae fuga libero dignissimos facere. Ex similique qui
-              mollitia sapiente harum. Voluptas mollitia eius quia inventore
-              saepe, commodi harum quae sapiente? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Eveniet molestiae fuga libero
-              dignissimos facere. Ex similique qui mollitia sapiente harum.
-              Voluptas mollitia eius quia inventore saepe, commodi harum quae
-              sapiente?
-            </p>
+
+            <ul>
+              {serviceNames.map((serviceName, index) => (
+                <li key={index}>{serviceName}</li>
+              ))}
+            </ul>
           </div>
           <div className="text-sm p-6 bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
@@ -139,13 +137,11 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames }) => {
           <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center  mb-4">
               <FaBarcode className="rotate-90" />
-              <h5>Categories</h5>
+              <h5>Address</h5>
             </div>
-            <ul>
-              {serviceNames.map((serviceName, index) => (
-                <li key={index}>{serviceName}</li>
-              ))}
-            </ul>
+            <p>Address:{addresss}</p>
+
+           
           </div>
           <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
