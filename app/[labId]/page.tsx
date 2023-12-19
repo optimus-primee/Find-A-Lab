@@ -65,10 +65,10 @@ export default async function UserPage({ params: { labId } }: Params) {
             </div>
           </div>
         </div>
-        
       </div>
       <Profile
         taskName={task.description}
+        serviceNames={task.services.map((s) => s.name)}
         
       />
     </>

@@ -8,14 +8,15 @@ import {
 import DayTimeDate from "./DayTimeDate";
 import Intrested from "./Intrested";
 interface ProfileProps {
-  taskName: string; // Assuming taskName is a string, adjust the type accordingly
+  taskName: string;
+  serviceNames: string[];
+
+  // Assuming taskName is a string, adjust the type accordingly
 }
 
-const Profile: React.FC<ProfileProps> = ({ taskName }) => {
+const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames }) => {
   const [toggle, setToggle] = useState(false);
 
-
-  
   return (
     <div className="max-w-[1440px] mx-auto mt-10 px-20">
       <div className="grid grid-cols-6 gap-6 ">
@@ -140,7 +141,11 @@ const Profile: React.FC<ProfileProps> = ({ taskName }) => {
               <FaBarcode className="rotate-90" />
               <h5>Categories</h5>
             </div>
-            p
+            <ul>
+              {serviceNames.map((serviceName, index) => (
+                <li key={index}>{serviceName}</li>
+              ))}
+            </ul>
           </div>
           <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
