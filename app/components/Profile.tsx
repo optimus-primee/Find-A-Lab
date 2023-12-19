@@ -11,12 +11,14 @@ interface ProfileProps {
   taskName: string;
   serviceNames: string[];
   maps:string;
-  addresss:string
+  addresss:string;
+  emaill:string;
+  phone_numberr:string;
 
   // Assuming taskName is a string, adjust the type accordingly
 }
 
-const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss }) => {
+const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss,emaill,phone_numberr }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -139,7 +141,9 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss 
               <FaBarcode className="rotate-90" />
               <h5>Address</h5>
             </div>
-            <p>Address:{addresss}</p>
+            <p>Email: {emaill}</p>
+            <p>Phone Number: {phone_numberr}</p>
+            <p>Address: {addresss}</p>
 
            
           </div>

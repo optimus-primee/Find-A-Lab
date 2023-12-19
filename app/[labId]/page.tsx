@@ -72,6 +72,8 @@ export default async function UserPage({ params: { labId } }: Params) {
         serviceNames={task.services.map((s) => s.name)}
         maps={task.map}
         addresss={task.address}
+        emaill={task.email}
+        phone_numberr={task.phone_numberr}
       />
     </>
   );
