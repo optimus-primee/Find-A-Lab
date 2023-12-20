@@ -1,0 +1,43 @@
+{
+  "labs": [
+    {
+      "id": "1",
+      "name": "Gregcare medical laboratory",
+      "short": "Gregcare Medical laboratory is a leading provider of medical diagnostic services in Abia state.",
+      "description": "Gregcare Medical laboratory is a leading provider of medical diagnostic services in Abia state. We offer a comprehensive range of diagnostic tests, including imaging, pathology, and specialized screenings. Our commitment to precision and patient care ensures that individuals receive the highest standard of diagnostic services, contributing to informed healthcare decisions and improved well-being.",
+      "service": "Medical diagnostic services",
+
+      "age": 25
+    },
+    {
+      "id": "2",
+      "name": "Health wellness diagnostic centre LTD",
+      "short": "Health wellness diagnostic centre is your go-to place for high-tech health checks",
+      "services": [
+        {
+          "id": "1",
+          "name": "Digital X ray"
+        },
+        { "id": "2", "name": " 4D Ultrasound services" },
+        { "id": "3", "name": "ECG and other Laboratory investigations" }
+      ],
+      "description": "Health wellness diagnostic centre is your go-to place for high-tech health checks. We offer digital X-rays, 4D ultrasound services, ECG, and other lab tests to give you a complete picture of your health. Our modern tools provide clear and detailed results, helping you and your doctor understand what's going on inside your body.",
+      "age": 30
+    },
+    {
+      "id": " 3",
+      "name": "LEAH MEDICAL CENTRE",
+      "services": [
+        {
+          "id": "1",
+          "name": "Hopsital Services"
+        },
+        { "id": "2", "name": " Laboratory" },
+        { "id": "3", "name": "Radiology/Imaging,Ambulance service" }
+      ],
+      "short": "From hospital care and laboratory tests to cutting-edge radiology/imaging services, we've got your health covered",
+      "description": "From hospital care and laboratory tests to cutting-edge radiology/imaging services, we've got your health covered. Our dedicated team ensures that you receive top-notch medical attention, whether it's routine check-ups or advanced imaging procedures. Additionally, our ambulance service is available to provide swift and reliable transportation in times of need.",
+      "age": 22
+    }
+  ]
+}
