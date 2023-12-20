@@ -55,28 +55,13 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss,
               <h5>Categories</h5>
             </div>
 
-            <ul>
+            <ul className="list-disc">
               {serviceNames.map((serviceName, index) => (
                 <li key={index}>{serviceName}</li>
               ))}
             </ul>
           </div>
-          <div className="text-sm p-6 bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
-            <div className="flex gap-2 items-center mb-4">
-              <FaBarcode className="rotate-90" />
-              <h5>Description</h5>
-            </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              molestiae fuga libero dignissimos facere. Ex similique qui
-              mollitia sapiente harum. Voluptas mollitia eius quia inventore
-              saepe, commodi harum quae sapiente? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Eveniet molestiae fuga libero
-              dignissimos facere. Ex similique qui mollitia sapiente harum.
-              Voluptas mollitia eius quia inventore saepe, commodi harum quae
-              sapiente?
-            </p>
-          </div>
+       
         </div>
         <div className="col-span-3 flex flex-col items-center gap-8 w-full">
           <div
@@ -144,8 +129,6 @@ const Profile: React.FC<ProfileProps> = ({ taskName, serviceNames,maps,addresss,
             <p>Email: {emaill}</p>
             <p>Phone Number: {phone_numberr}</p>
             <p>Address: {addresss}</p>
-
-           
           </div>
           <div className="text-sm p-6 w-full bg-white rounded-[6px] shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
             <div className="flex gap-2 items-center mb-4">
