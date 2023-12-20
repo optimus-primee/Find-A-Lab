@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import bg from "@/public/logo.jpg";
+import bg from "@/public/logo2.jpg";
 import Search from "./Search";
 import Searchh from "./Searchh";
 
