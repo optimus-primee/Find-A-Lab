@@ -93,7 +93,7 @@ const handleSearch = async () => {
   return (
     <div className="sm:px-16 px-4 max-w-[1440px] mx-auto">
       <form onSubmit={(e) => searchTask(e)}>
-        <div className="z-[999] xl:w-[700px] w-full h-[60px] rounded-[50px] text-red-500 bg-white flex px-6 justify-between items-center">
+        <div className="z-[999] xl:w-[700px] w-full h-[60px] rounded-[50px] text-blue-700 bg-white flex px-6 justify-between items-center">
           <input
             className="w-[100%] h-[100%]  bg-transparent outline-none"
             type="text"
