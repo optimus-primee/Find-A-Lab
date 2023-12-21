@@ -26,10 +26,10 @@ export default function Navbar() {
                 <div className="text-black text-bold text-[30px]">LOGO</div>
               </Link>
               <div className="flex items-center">
-                <nav className="sm:flex hidden">
+                <nav className="mr-7">
                   <NavLinks />
                 </nav>
-                <div className="flex gap-5">
+                <div className="flex gap-7">
                   <div>Blog</div>
                   <div>Contact Us</div>
                 </div>

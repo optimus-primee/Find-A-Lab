@@ -11,4 +11,5 @@ type Task = {
   address:string;
   email:string;
   phone_number:string;
+  location:string;
 };
