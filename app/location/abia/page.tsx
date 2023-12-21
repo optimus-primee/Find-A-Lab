@@ -24,8 +24,7 @@ export default async function TasksPage() {
       <div className="flex gap-10 mt-20">
         {filteredTasks.map((task) => {
           return (
-            <div>
-              <div className="">
+          
                 <Link
                   className="bg-[#74d4cc] py-8 px-10"
                   href={`/${task.id}`}
@@ -33,8 +32,7 @@ export default async function TasksPage() {
                 >
                   {task.name}
                 </Link>
-              </div>
-            </div>
+            
           );
         })}
       </div>
